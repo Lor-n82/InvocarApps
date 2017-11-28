@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if (b.getId() == R.id.buttonLlamar) {
             Intent i1 = new Intent(Intent.ACTION_CALL);
-            i1.setData(Uri.parse("tel:123456789"));
+            i1.setData(Uri.parse("tel:722466004"));
 
             startActivity(i1);
         }
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i1);
         }
         if (b.getId()==R.id.buttonMarcar){
-            Intent i1=new Intent(Intent.ACTION_DIAL, Uri.parse("tel:+722466004"));
+            Intent i1=new Intent(Intent.ACTION_DIAL, Uri.parse("tel:722466004"));
             startActivity(i1);
         }
         if (b.getId()==R.id.buttonWhatsapp){
