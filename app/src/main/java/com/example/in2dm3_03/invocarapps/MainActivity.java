@@ -48,5 +48,14 @@ public class MainActivity extends AppCompatActivity {
             Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.whatsapp");
             startActivity(launchIntent);
         }
+
+
+        if (b.getId()==R.id.buttonCompartirTexto) {
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "Este es el texto que voy a compartir");
+            sendIntent.setType("text/plain");
+            startActivity(sendIntent);
+        }
     }
 }
