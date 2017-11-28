@@ -44,5 +44,9 @@ public class MainActivity extends AppCompatActivity {
             Intent i1=new Intent(Intent.ACTION_DIAL, Uri.parse("tel:+722466004"));
             startActivity(i1);
         }
+        if (b.getId()==R.id.buttonWhatsapp){
+            Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.whatsapp");
+            startActivity(launchIntent);
+        }
     }
 }
