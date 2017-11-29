@@ -57,5 +57,21 @@ public class MainActivity extends AppCompatActivity {
             sendIntent.setType("text/plain");
             startActivity(sendIntent);
         }
+
+        if (b.getId()==R.id.buttonContactos){
+            Intent i = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("content://contacts/people/"));
+            startActivity(i);
+        }
+
+        if (b.getId()==R.id.buttonFotos){
+            Intent i = new Intent("android.media.action.IMAGE_CAPTURE");
+            //sino funciona la camara probar con mediaStore.
+            startActivityForResult(i, 0);
+        }
+
+        if (b.getId()==R.id.buttonMapa){
+            Intent i=new Intent(android.content.Intent.ACTION_VIEW,Uri.parse("geo:43.26869749999999, -2.9366178999999875"));
+            startActivity(i);
+        }
     }
 }
